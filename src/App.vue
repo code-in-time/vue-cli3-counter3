@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Counter from './components/Countainer'
+import Counter from './components/Counter'
 
 export default {
   name: 'app',
