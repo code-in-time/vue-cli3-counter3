@@ -2,7 +2,9 @@
   <div id="app">
     <Counter personName="fred" v-on:emit-setName="logName"/>
     <div class="area">
-      {{'test'}}
+      
+     <h5>Example heading <b-badge>{{'test'}}</b-badge></h5>
+
     </div>
     <p>{{newName}}</p>
   </div>
