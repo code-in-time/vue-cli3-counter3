@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Counter personName="fred" v-on:emit-setName="logName"/>
+    <div class="area">
+      {{'test'}}
+    </div>
+    <p>{{newName}}</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Counter from './components/Countainer'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Counter
+  },
+  data() {
+    return {
+      newName: '__'
+    }
+  },
+  methods: {
+    logName(e) {
+      console.log('e', e)
+      this.newName = e
+    }
   }
 }
 </script>
@@ -24,5 +38,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.area {
+  padding-top: 30px
 }
 </style>
